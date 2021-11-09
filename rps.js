@@ -15,13 +15,13 @@ function playGame() {
 
   for(i = 0; i < 10; i++){
     let randomNumber = getRandomInt(0, 3);
-    console.log(randomNumber)
+    console.log(randomNumber) //used to double check the num
     let choiceCPU = arrayCPU[randomNumber];
-    console.log(choiceCPU)
+    console.log(choiceCPU) // used to double check num is made into character
 
 
     let userChoice = prompt(` r p or s?`);
-    console.log(userChoice)
+    console.log(userChoice) //used to double check user input
 
     if (userChoice === choiceCPU) {
       ties++
@@ -38,6 +38,9 @@ function playGame() {
       (userChoice === 'r' && choiceCPU === 's')) {
       wins++
       alert(`You win!`)
+    } else {
+      alert(`That was not the right input`)
+      i--
     }
   }
 

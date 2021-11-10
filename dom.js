@@ -2,6 +2,15 @@ let num = 0;
 function changeNum(){
   document.getElementById('numberDisplayed').textContent = num
 }
+function random_bg_color() {
+  var x = Math.floor(Math.random() * 256);
+  var y = Math.floor(Math.random() * 256);
+  var z = Math.floor(Math.random() * 256);
+  var bgColor = "rgb(" + x + "," + y + "," + z + ")";
+  console.log(bgColor);
+
+  document.body.style.background = bgColor;
+}
 
 document.getElementById("up").addEventListener("click", () => {
   num++
@@ -9,13 +18,12 @@ document.getElementById("up").addEventListener("click", () => {
 });
 
 document.getElementById("down").addEventListener("click", () => {
-  num--
+  num --
   changeNum()
 });
 
 document.getElementById("random").addEventListener("click", () => {
-  num += Math.random()
-  changeNum()
+  random_bg_color();
 });
 
 document.getElementById("reset").addEventListener("click", () => {

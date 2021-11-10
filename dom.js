@@ -28,5 +28,6 @@ document.getElementById("random").addEventListener("click", () => {
 
 document.getElementById("reset").addEventListener("click", () => {
   num = 0
+  document.body.style.background = "rgb(225,225,225)";
   changeNum()
 });

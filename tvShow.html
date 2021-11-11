@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Favorite Tv Shows</title>
+</head>
+
+<body>
+  <h1>What are some of your favorite TV shows?</h1>
+  <form>
+    <p>
+      <label for="title">Title:</label>
+      <input type="text" name="title" id="title">
+    </p>
+    <p>
+      <label for="numEpisodes">Number of Episodes:</label>
+      <input type="text" name="numEpisodes" id="numEpisodes">
+    </p>
+    <p>
+      <label for="mainCharacter">Main Character:</label>
+      <input type="text" name ="mainCharacter" id="mainCharacter">
+    </p>
+    <p>
+      <label for="synopsis">Synopsis:</label>
+      <input type="text" name="synopsis" id="synopsis">
+    </p>
+    <button id="sumbit">Sumbit</button>
+  </form>
+
+
+  <div id="tvShows"></div>
+
+
+  <script>
+
+    document.getElementById('sumbit').addEventListener('click', event => {
+      event.preventDefault()
+
+      let userElem = document.createElement('div')
+      userElem.innerHTML = `
+        <h3>${document.getElementById('title').value}</h3>
+        <h4>${document.getElementById('numEpisodes').value}</h4>
+        <h4>${document.getElementById('mainCharacter').value}</h4>
+        <h4>${document.getElementById('synopsis').value}</h4>
+        <hr>
+      `
+      document.getElementById('tvShows').append(userElem)
+
+      document.getElementById('title').value = ''
+      document.getElementById('numEpisodes').value = ''
+      document.getElementById('mainCharacter').value = ''
+      document.getElementById('synopsis').value = ''
+
+    })
+
+  </script>
+</body>
+
+</html>

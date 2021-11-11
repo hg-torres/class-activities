@@ -35,10 +35,11 @@ const shows = [
 for (let i = 0; i < shows.length; i++) {
   let showElem = document.createElement('div')
   showElem.innerHTML = `
-        <h3>${shows[i].title}</h3>
-        <h4>${shows[i].numEpisodes}</h4>
-        <h4>${shows[i].mainCharacter}</h4>
-        <h4>${shows[i].synopsis}</h4>
+        <h3>Title: ${shows[i].title}</h3>
+        <h4>Number of Episodes: ${shows[i].numEpisodes}</h4>
+        <h4>Main Character: ${shows[i].mainCharacter}</h4>
+        <h4>Synopsis: ${shows[i].synopsis}</h4>
+        <button class = "delete">Delete</button>
         <hr>
       `
   document.getElementById('tvShows').append(showElem)
@@ -56,10 +57,11 @@ document.getElementById('submit').addEventListener('click', event => {
 
   let userElem = document.createElement('div')
   userElem.innerHTML = `
-        <h3>${document.getElementById('title').value}</h3>
-        <h4>${document.getElementById('numEpisodes').value}</h4>
-        <h4>${document.getElementById('mainCharacter').value}</h4>
-        <h4>${document.getElementById('synopsis').value}</h4>
+        <h3>Title: ${document.getElementById('title').value}</h3>
+        <h4>Number of Episodes:${document.getElementById('numEpisodes').value}</h4>
+        <h4>Main Character:${document.getElementById('mainCharacter').value}</h4>
+        <h4>Synopsis:${document.getElementById('synopsis').value}</h4>
+        <button class = "delete">Delete</button>
         <hr>
       `
   document.getElementById('tvShows').append(userElem)
@@ -69,4 +71,11 @@ document.getElementById('submit').addEventListener('click', event => {
   document.getElementById('mainCharacter').value = ''
   document.getElementById('synopsis').value = ''
 
+})
+
+
+document.addEventListener('click', event => {
+  if (event.target.className === 'delete'){
+    event.target.parentNode.remove()
+  }
 })

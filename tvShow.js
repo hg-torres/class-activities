@@ -16,6 +16,18 @@ const shows = [
     numEpisodes: '22',
     mainCharacter: 'Sherlock',
     synopsis: 'FBI team up with criminal to catch other criminals'
+  },
+  {
+    title: 'Arcane',
+    numEpisodes: '3',
+    mainCharacter: 'Too many?',
+    synopsis: 'Lore for league of legends'
+  },
+  {
+    title: 'Loki',
+    numEpisodes: '7',
+    mainCharacter: 'Loki',
+    synopsis: 'Loki showing us why hes the God of Mischief'
   }
   
 ]

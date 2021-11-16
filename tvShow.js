@@ -78,4 +78,4 @@ document.addEventListener('click', event => {
   if (event.target.className === 'delete'){
     event.target.parentNode.remove()
   }
-})
+}

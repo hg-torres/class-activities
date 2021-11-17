@@ -4,7 +4,7 @@ function retrieveData(pokemonName){
     .then(res => {
       const pokemon = res.data
       console.log(pokemon)
-      let pokeName = pokemon.species.name
+      let pokeName = pokemon.species.name.toUpperCase()
       console.log(pokeName)
       console.log(pokeName)
       

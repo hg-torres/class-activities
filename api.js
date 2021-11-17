@@ -8,7 +8,6 @@ function retrieveData(pokemonName){
       console.log(pokeName)
       console.log(pokeName)
       
-
       if (pokeName) {
         document.getElementById('pokeNames').innerHTML = `${pokeName}`
         document.getElementById('pokeImage').innerHTML = `
@@ -39,10 +38,9 @@ function retrieveData(pokemonName){
 }
 retrieveData('umbreon')
 
-
 document.getElementById('searchBtn').addEventListener('click', event => {
   event.preventDefault()
-  pokemonName = document.getElementById('pokeName').value
+  pokemonName = document.getElementById('pokeName').value.toLowerCase()
   retrieveData(pokemonName)
 })
 
